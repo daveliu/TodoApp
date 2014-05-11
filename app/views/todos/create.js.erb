@@ -1,3 +1,5 @@
-$("#todo-list").append("<%= j(render(@todo)) %>");
+$("#todo-list").prepend("<%= j(render(@todo)) %>");
 
 $("#new-todo").val("");
+
+bindSortable();

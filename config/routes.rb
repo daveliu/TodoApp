@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     member do
       post :toggle
     end
+    
+    collection do
+      post :sort
+    end  
   end  
   
   root 'todos#index'

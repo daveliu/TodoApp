@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @todos = current_user.todos
+    @todos = current_user.todos.order('priority')
   end
   
   def create
@@ -18,6 +18,16 @@ class TodosController < ApplicationController
   def toggle
     @todo = Todo.find(params[:id])
     @todo.toggle!(:finished)
+  end
+  
+  def sort
+    # "todo_ids"=>["#todo_3", "#todo_6"]    
+    
+    params[:todo_ids].each_with_index do |id, index|
+      Todo.where({id: id.split("_").last}).update_all({priority: index+1})
+    end
+    
+    render nothing: true
   end
   
   private
