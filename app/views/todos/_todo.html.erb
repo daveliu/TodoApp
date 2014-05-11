@@ -1,5 +1,8 @@
-<li id="<%= dom_id(todo) %>">
+<li id="<%= dom_id(todo) %>" class="<%= "completed" if todo.finished? %>">
   <div class="view">
+    <%= form_for(todo, url: toggle_todo_path(todo), method: :post, remote: true) do |f| %>
+      <%= f.check_box :finished, class: "toggle", "data-behavior" => "toggle_todo" %>
+    <% end %>
     <label><%= todo.content %></label>
     <%= form_for(todo, method: :delete, remote: true) do |f| %>
       <button type="submit" class="destroy"></button>

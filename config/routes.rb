@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   
   
-  resources :todos
+  resources :todos do
+    member do
+      post :toggle
+    end
+  end  
   
   root 'todos#index'
   # The priority is based upon order of creation: first created -> highest priority.

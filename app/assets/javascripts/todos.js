@@ -6,3 +6,7 @@ $(document).on("keypress", "[data-behavior~=create_todo]", function(e) {
     return e.preventDefault();
   }
 });
+
+$(document).on("click", "[data-behavior~=toggle_todo]", function() {
+  return $(this).closest("form").submit();
+});

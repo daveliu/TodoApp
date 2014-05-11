@@ -1,0 +1,4 @@
+$("#<%= dom_id(@todo) %>")
+  .toggleClass("completed", <%= @todo.finished? %>)
+  .find("input.toggle")
+  .prop("checked", <%= @todo.finished? %>);
