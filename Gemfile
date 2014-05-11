@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 
 
 gem 'devise'
+gem 'acts_as_list'
 
 group :test do
   gem 'rspec-rails'
