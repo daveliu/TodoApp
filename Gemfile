@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'acts_as_list'
+gem "bower-rails", "~> 0.7.2"
 
 group :test do
   gem 'rspec-rails'
