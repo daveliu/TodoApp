@@ -30,7 +30,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'acts_as_list'
 
-group :test do
+group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl'
   gem 'cucumber-rails', :require => false
