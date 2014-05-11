@@ -1,41 +1,46 @@
-<section id="todoapp">
+<div id="login">
   
-  <header id="header">
-    <h1>Todos</h1>
-  </header>
+  <section id="todoapp">
   
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "pure-form pure-form-aligned"}) do |f| %>
+    <header id="header">
+      <h1>Todos</h1>
+    </header>
   
-    <div class="pure-control-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "pure-form pure-form-aligned"}) do |f| %>
+  
+      <div class="pure-control-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
 
-    <div class="pure-control-group">
-      <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+      <div class="pure-control-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
 
 
-    <div class="pure-controls">
-      <% if devise_mapping.rememberable? -%>
-          <label for="remember_me" class="pure-checkbox">
-            <%= f.check_box :remember_me, id: "remember_me" %> 
-            Remember Me
-         </label>
-      <% end -%>
+      <div class="pure-controls">
+        <% if devise_mapping.rememberable? -%>
+            <label for="remember_me" class="pure-checkbox">
+              <%= f.check_box :remember_me, id: "remember_me" %> 
+              Remember Me
+           </label>
+        <% end -%>
       
-      <%= f.submit "Sign in", class: "pure-button pure-button-primary" %>
+        <%= f.submit "Sign in", class: "pure-button pure-button-primary" %>
       
-      <p>
-        <%= render "devise/shared/links" %>
-      </p>
+        <p  >
+          <%= render "devise/shared/links" %>
+        </p>
       
-    </div>
+      </div>
     
-  <% end %>
+    <% end %>
 
 
   
-</section>  
+  </section>  
 
+  
+  
+</div>

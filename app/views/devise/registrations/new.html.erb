@@ -1,39 +1,43 @@
-<section id="todoapp">
+<div id="login">
   
-  <header id="header">
-    <h1>Todos</h1>
-  </header>
+  <section id="todoapp">
   
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "pure-form pure-form-aligned"}) do |f| %>
+    <header id="header">
+      <h1>Todos</h1>
+    </header>
   
-    <div class="pure-control-group">
-      <%= devise_error_messages! %>
-    </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "pure-form pure-form-aligned"}) do |f| %>
+  
+      <div class="pure-control-group">
+        <%= devise_error_messages! %>
+      </div>
 
-    <div class="pure-control-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+      <div class="pure-control-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
 
-    <div class="pure-control-group">
-      <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+      <div class="pure-control-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
 
-    <div class="pure-control-group">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
+      <div class="pure-control-group">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
 
-    <div class="pure-controls">
-      <%= f.submit "Sign up", class: "pure-button pure-button-primary" %>
+      <div class="pure-controls">
+        <%= f.submit "Sign up", class: "pure-button pure-button-primary" %>
       
-      <p>  <%= render "devise/shared/links" %></p>
-    </div>
+        <p>  <%= render "devise/shared/links" %> </p>
+      </div>
     
-  <% end %>
+    <% end %>
 
 
   
 
-</section>
+  </section>
+
+</div>
